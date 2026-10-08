@@ -1,0 +1,12 @@
+# NMDungeon의 연출 사운드 설정입니다. sound에는 Bukkit Sound enum 이름을 사용합니다.
+door-opening:
+  start:
+    enabled: true
+    sound: BLOCK_IRON_DOOR_OPEN
+    volume: 1.0
+    pitch: 0.8
+  complete:
+    enabled: true
+    sound: BLOCK_CHAIN_BREAK
+    volume: 0.9
+    pitch: 1.0

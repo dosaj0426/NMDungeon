@@ -1,0 +1,45 @@
+instance-world: nm_dungeon_instances
+slot-size: 256
+blocks-per-tick: 6000
+
+# FAWE schematic 생성의 동시 실행 수입니다. 서버 부하 방지를 위해 기본값은 1입니다.
+generation:
+  max-concurrent: 1
+
+# 던전 맵 생성 중 파티원에게 표시되는 보스바입니다.
+# color: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+# style: SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+generation-bossbar:
+  enabled: true
+  title: "&e맵 생성중 (&f{percent}%&e)"
+  color: YELLOW
+  style: SOLID
+
+# /nmdungeon loadtest에서 한 번에 요청할 수 있는 최대 생성·삭제 반복 횟수입니다.
+load-test:
+  max-runs: 8
+
+# ID 없이 /nmdungeon start로 실행하는 MVP 테스트 던전의 기본 제한입니다. 0은 무제한입니다.
+default-limits:
+  max-lives: 0
+  time-limit-seconds: 0
+
+# 던전 안에서 공유되는 안개 지도입니다. 실제 지형이 아닌 생성 계획만 표시합니다.
+exploration-map:
+  enabled: true
+  item-name: "&a탐험 지도"
+
+# message.yml의 메시지별 표시 여부입니다. false면 해당 메시지만 숨깁니다.
+messages:
+  enabled:
+    all: true
+
+# 모듈 schematic의 최대 선택 영역입니다. X/Z는 16의 배수일 필요가 없습니다.
+max-module-size:
+  x: 64
+  y: 32
+  z: 64
+
+# /nmdungeon start <dungeonId>는 exported schematic 모듈을 FAWE로 붙여 생성한다.
+# dungeonId를 생략하면 자산 제작 전 테스트용 MVP 맵을 생성한다.
+generator: TICK_BATCHED_MVP

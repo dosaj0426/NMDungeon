@@ -1,0 +1,25 @@
+name: NMDungeon
+version: ${project.version}
+main: com.nmdungeon.NMDungeonPlugin
+api-version: '26.1'
+author: NMDungeon
+description: Modular procedural instance dungeon MVP
+softdepend: [FastAsyncWorldEdit, MythicMobs, Parties, PlaceholderAPI, Lucid]
+commands:
+  nmdungeon:
+    description: NMDungeon MVP command
+    usage: /nmdungeon <start|clear|status|end|create|delete|edit|module|connector|door|validate|reload>
+    aliases: [nmd, 'NM던전', 'nm던전']
+permissions:
+  nmdungeon.command:
+    description: Allows using NMDungeon commands.
+    default: op
+  nmdungeon.reload:
+    description: Allows reloading NMDungeon config.yml and message.yml.
+    default: op
+  nmdungeon.loadtest:
+    description: Allows running NMDungeon schematic generation load tests.
+    default: op
+  nmdungeon.delete:
+    description: Allows permanently deleting an NMDungeon definition and its editor world.
+    default: op
